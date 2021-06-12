@@ -13,10 +13,13 @@
 	--preformatted-text-bgcolor:     #282c34;                    /* darkgray */
 	--heading-bgcolor:               #444444;                        /* gray */
 	--heading-print-bgcolor:         #eeeeee;                   /* lightgray */
+	--font-sans: "Consolas";
+    --font-mono: "Consolas";
 }
 
 /*------ Change the font size to 13px ---------------------------------------*/
 body, th, td, p.inline-code {
+	font-family: var(--font-sans) !important;
 	font-size: var(--font-size);
 }
 /*---------------------------------------------------------------------------*/
@@ -68,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 /*---------------------------------------------------------------------------*/
 
 /*------ Headings: Use nested counters --------------------------------------*/
-body { counter-reset: h1counter; }
+/* body { counter-reset: h1counter; }
 h1 { counter-reset: h2counter; }
 h2 { counter-reset: h3counter; }
 h3 { counter-reset: h4counter; }
@@ -104,8 +107,8 @@ h5:before {
 h6:before {
 	counter-increment: h6counter;
 	content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0\0000a0";
-}
-/*---------------------------------------------------------------------------*/
+} */
+---------------------------------------------------------------------------
 
 /*------ TOC: Use nested counters for list items ----------------------------*/
 .table-of-contents ol {
